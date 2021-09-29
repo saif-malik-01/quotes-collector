@@ -32,7 +32,7 @@ function add(data, storeData) {
     }
   } else {
     let { text, author, book } = data;
-    fs.writeFile("./quotes.json", JSON.stringify([{ text, author, book }]), () => {
+    fs.writeFile("./quotes.json", JSON.stringify([{ line:text, book,author }]), () => {
       console.log("first");
     });
   }
