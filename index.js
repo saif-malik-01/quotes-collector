@@ -39,7 +39,8 @@ function add(data, storeData) {
 }
 
 app.get("/", (req, res) => {
-  res.json({ message: "ok" });
+  const file = './quotes.json';
+  res.download(file); // Set disposition and send it.
 });
 
 app.listen(PORT, () => {
